@@ -1,0 +1,28 @@
+.form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;  
+    
+}
+
+img{
+    width: 75px;
+    height: 75px;
+    padding-left: 0%;
+}
+
+h1{
+    padding-left: 0%;
+  }
+
+p{
+    color:rgb(185, 201, 212);
+    font-weight: bold;
+    font-size: small;
+}
+
+.signup{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+}

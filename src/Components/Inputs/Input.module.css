@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px;
+    justify-content: center;
+  }
+  .label {
+    color: #fffded;
+    font-size: small;
+  }
+  
+  .input {
+    border: 0;
+    height: 56px;
+    width: 350px;
+    background: #daf1f5;
+    box-shadow: inset 0px 1px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    color: #0a404d;
+    text-indent: 24px;
+    max-width: 500px;
+  }
+
+  
