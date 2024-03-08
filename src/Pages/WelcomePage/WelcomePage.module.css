@@ -1,0 +1,23 @@
+.page{
+    background-color: #344D54;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    padding-left: 40vw;
+}
+
+h1{
+    font-family: sans-serif;
+    color: white;
+    padding-left: 30vw;
+}
+
+.buttonsCont{
+    display: flex;
+    padding-left: 38vw;
+}
