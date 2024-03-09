@@ -2,7 +2,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import Footer from '../../Components/Footer/Footer';
 
 
-export default function Mainpage() {
+export default function MainPage() {
   return (
     <div>
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%' }}>
