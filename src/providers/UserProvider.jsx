@@ -8,9 +8,11 @@ export default function UserProvider({ children }) {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user !== null ? "User logged in" : "User logged out");
+      console.log(user !== null ? "User logged in "+ user.email : "User logged out");
       setUser(user);
     });
   }, []);
-  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+
+
+  return <UserContext.Provider value={{user}}>{children}</UserContext.Provider>;
 }
