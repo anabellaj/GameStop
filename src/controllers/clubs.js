@@ -35,3 +35,5 @@ export async function deleteClub(id) {
     
     await deleteDoc(clubsSnapshot.docs[0].ref);
 }
+
+export const clubs = getClubs();

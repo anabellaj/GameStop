@@ -3,18 +3,20 @@
     width: 300px;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 0px 10px 60px 10px;
 }
 
 .name{
     color: white;
-    font-size:32px;
+    font-size:28px;
+    
 }
 
 .desc{
     color: lightgray;
-    font-size: 22px;
+    font-size: 18px;
 }
+
 .mas{
     display: flex;
     flex-wrap: wrap; 

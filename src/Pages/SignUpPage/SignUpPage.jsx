@@ -12,8 +12,8 @@ export default function LogIn (){
                <h1>Sign Up</h1>
                 <Input placeholder='Username' type='String'></Input>
                 <Input placeholder='E-Mail' type='String'></Input>
-                <Input placeholder='Contraseña' type='String'></Input>
-                <Input placeholder='Confirmar Contraseña' type='String'></Input>
+                <Input placeholder='Contraseña' type='password'></Input>
+                <Input placeholder='Confirmar Contraseña' type='password'></Input>
                 <div className={styles.signup}>
                 <Button display='Sign Up'> </Button>
                

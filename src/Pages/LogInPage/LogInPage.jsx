@@ -12,7 +12,7 @@ export default function LogIn (){
             <div className={styles.form}>
                <h1>Log In</h1>
                 <Input placeholder='E-Mail' type='String'></Input>
-                <Input placeholder='Contraseña' type='String'></Input>
+                <Input placeholder='Contraseña' type='password'></Input>
                 <div className={styles.login}>
                 <Button display='Log In'> </Button>
                 <a href=""><img src="./GoogleLogo.png"/></a>

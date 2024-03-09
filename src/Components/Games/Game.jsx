@@ -1,5 +1,4 @@
 import styles from './Game.module.css'
-
 export default function Game({nombre, genero, descripcion, fave}){
     const favorite = fave ? 'Agregar Favorito' : 'Quitar Favorito';
 

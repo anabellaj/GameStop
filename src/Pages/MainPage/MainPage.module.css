@@ -3,3 +3,14 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.available{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+
+    padding-top: 60px;
+}
