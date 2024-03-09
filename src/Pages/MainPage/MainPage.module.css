@@ -1,9 +1,16 @@
-.bar{
-    position: 'fixed';
-    top: 0;
-    left: 0;
-     width: '100%' }
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.available{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .container{
-    background-color: blue;
+
+    padding-top: 60px;
 }
