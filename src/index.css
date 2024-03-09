@@ -5,13 +5,13 @@
 
   color-scheme: light dark;
   color: white;
-  background-color: #242424;
+  background-color: #242424 ;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color1: #242424;
+  
 }
 
 a {

@@ -8,6 +8,7 @@ export default function LogIn (){
     return (
         
         <div className={styles.container}>
+    
             <div className={styles.form}>
                <h1>Log In</h1>
                 <Input placeholder='E-Mail' type='String'></Input>
@@ -18,6 +19,7 @@ export default function LogIn (){
                 </div>
                 <a href="">¿Aún no tienes cuenta? ¡Regístrate!</a>
             </div>
+        
             
 
 
