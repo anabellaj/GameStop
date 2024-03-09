@@ -1,15 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import UserProvider  from './providers/UserProvider.jsx'
-import { RouterProvider } from 'react-router-dom'
-import { router } from './router.jsx'
-
+//import WelcomePage from './Pages/WelcomePage/WelcomePage.jsx'
+//import LogInPage from './Pages/LogInPage/LogInPage.jsx'
+//import SignUpPage from './Pages/SignUpPage/SignUpPage.jsx'
+//import MainPage from './Pages/MainPage/MainPage.jsx'
+import Layout from './layout.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={router}/>
-    </UserProvider>
+    <Layout/>
   </React.StrictMode>,
 )

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function NavBar (){
     return(
+      <div  style={{ position: 'fixed', top: 0, left: 0, width: '100%' }}>
         <nav className="navbar navbar-expand bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Mi Perfil</a>
@@ -27,5 +28,6 @@ export default function NavBar (){
           </div>
         </div>
       </nav>
+      </div>
       )
       }
