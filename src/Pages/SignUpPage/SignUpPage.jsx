@@ -11,6 +11,8 @@ import { createUser, isNewUser } from "../../controllers/users";
 
 export default function SignUpPage() {
   const [username, setUsername] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -22,6 +24,12 @@ export default function SignUpPage() {
     let valid = true;
     if (!username) {
       alert("El nombre de usuario no puede estar vacío");
+      valid = false;
+    }else if(!firstname){
+      alert("El nombre no puede estar vacío");
+      valid = false;
+    }else if(!lastname){
+      alert("El apellido no puede estar vacío");
       valid = false;
     }else if (!email) {
       alert("El correo electrónico no puede estar vacío");
@@ -46,30 +54,28 @@ export default function SignUpPage() {
     }
     const user = await registerWithEmailAndPassword(email, password);
     if (user) {
-      const isNew = isNewUser(user.uid);
-      if (isNew) {
-        const data = {
-          uid: user.uid,
-          firstname: "",
-          lastname: "",
-          username: username,
-          email: email,
-          favoritegame: "",
-          memberships: [],
-        };
+      const data = {
+        uid: user.uid,
+        firstname: firstname,
+        lastname: lastname,
+        username: username,
+        email: email,
+        favoritegame: "",
+        memberships: [],
+      };
 
-        await createUser(data);
-      }
-
+      await createUser(data);
       alert("Registro exitoso:", user.email);
       navigate("/home");
+    }else{
+      alert("Error al iniciar sesión con Correo y Contraseña");
     }
   };
 
   const handleSignUpWithGoogle = async () => {
     const user = await loginWithGoogle();
     if (user) {
-        const isNew = isNewUser(user.uid);
+      const isNew = isNewUser(user.uid);
       if (isNew) {
         let username = prompt("Ingresa tu nombre de usuario:");
         while (!username) {
@@ -87,12 +93,16 @@ export default function SignUpPage() {
         };
 
         await createUser(data);
+        alert("Registro exitoso:", user.email);
+
       } else {
         alert("Ya estabas registrado");
       }
 
-      alert("Registro exitoso:", user.email);
       navigate("/home");
+
+    }else{
+      alert("Error al iniciar sesión con Google");
     }
   };
 
@@ -106,6 +116,20 @@ export default function SignUpPage() {
           placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+        <Input
+          label="First Name"
+          type="text"
+          placeholder="Enter your First Name"
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
+        />
+        <Input
+          label="Last Name"
+          type="text"
+          placeholder="Enter your Last Name"
+          value={lastname}
+          onChange={(e) => setLastname(e.target.value)}
         />
         <Input
           label="E-Mail"

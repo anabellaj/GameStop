@@ -12,6 +12,7 @@ export async function loginWithEmailAndPassword(email, password) {
     }
 }
 
+
 export async function loginWithGoogle() {
     try {
         const { user } = await signInWithPopup(auth, googleProvider);
