@@ -1,6 +1,6 @@
-//import React, { useEffect, useMemo } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useUser } from "./context/user.js";
+import React from "react";
+import { BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
+// import { useUser } from "./context/user.js";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import WelcomePage from "./Pages/WelcomePage/WelcomePage.jsx";
@@ -15,9 +15,8 @@ import DetailsPage from "./Pages/DetailsPage/DetailsPage.jsx";
 const MainRoutes = () => {
   const location = useLocation();
   // const navigate = useNavigate();
-  const user = useUser();
+  // const user = useUser();
 
-  console.log(user?.uid);
   const showNavBar =
     location.pathname !== "/" &&
     location.pathname !== "/login" &&
@@ -25,18 +24,11 @@ const MainRoutes = () => {
 
   // useEffect(() => {
   //   const isAuthenticated = user !== null;
-  //   const allowedRoutesAuthenticated = ["/home"];
-  //   const allowedRoutesNotAuthenticated = ["/", "/login", "/signup"];
+  //   const routes = ["/", "/login", "/signup", ];
 
-  //   if (
-  //     isAuthenticated &&
-  //     !allowedRoutesAuthenticated.includes(location.pathname)
-  //   ) {
+  //   if (isAuthenticated && routes.includes(location.pathname)) {
   //     navigate("/home", { replace: true });
-  //   } else if (
-  //     !isAuthenticated &&
-  //     !allowedRoutesNotAuthenticated.includes(location.pathname)
-  //   ) {
+  //   } else if (!isAuthenticated && !routes.includes(location.pathname)) {
   //     navigate("/", { replace: true });
   //   }
   // }, [user, navigate, location.pathname]);
