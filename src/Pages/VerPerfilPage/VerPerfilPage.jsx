@@ -5,7 +5,7 @@ import {useUser} from '../../context/user.js'
 import {getUserInfo} from '../../controllers/users.js'
 
 
-export default function VerPerfilPage(usuario){
+export default function VerPerfilPage(){
 
     const [data, setData] = useState(null);    
     
@@ -26,9 +26,9 @@ export default function VerPerfilPage(usuario){
           console.log("Error retrieving user information:", error);
         }
       };
-    
+    if (user){
     getInfo();
-
+    }
 
     return(
         <div>
