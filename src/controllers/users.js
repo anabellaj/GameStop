@@ -40,6 +40,23 @@ export async function getUser(uid) {
     }
 }
 
+export async function getUserInfo(uid) {
+    try {
+      const userDocRef = doc(db, "users", uid);
+      const userDocSnapshot = await getDoc(userDocRef);
+      
+      if (userDocSnapshot.exists()) {
+        return userDocSnapshot.data();
+      } else {
+        console.log("User document does not exist");
+        return null;
+      }
+    } catch (error) {
+      console.error("Error getting user info:", error);
+      throw error;
+    }
+  }
+
 // Función para eliminar un usuario por su UID
 export async function deleteUser(uid) {
     const usersCollection = collection(db, "users");

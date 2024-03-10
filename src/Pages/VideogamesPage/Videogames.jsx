@@ -7,6 +7,7 @@ import { getGames } from '../../controllers/games.js';
 
 export default function Videogames(){
     const [games, setGames] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     async function fetchGames() {
@@ -20,14 +21,22 @@ export default function Videogames(){
     fetchGames();
   }, []);
 
+  const filteredGames = games.filter((game) =>
+    game.titulo.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
     return (
         <div className={styles.container}>
             <div className={styles.header} style={{marginTop:'100px'}}>
                 <h1 style={{marginRight:'30px'}}>Busca tus Videojuegos Favoritos</h1>
-                <Input placeholder='Busca aquí!' type='string'></Input>
+                <Input 
+                      placeholder='Busca aquí!' 
+                      type='string' 
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                ></Input>
             </div>
             <div className={styles.games}>
-            {games.map((game) => (
+            {filteredGames.map((game) => (
           <Game
             key={game.ID}
             nombre={game.titulo}
