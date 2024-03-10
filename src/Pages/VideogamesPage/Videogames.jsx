@@ -39,21 +39,6 @@ export default function Videogames(){
     game.titulo.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // const handleLike = async (gameName, isLiked) =>{
-  //   try{
-  //     let likedGame = userGame;
-  //     if (isLiked){
-  //       likedGame = [...userGame, gameName];
-  //       setUserGame(likedGame);
-  //     } else{
-  //       likedGame = userGame.filter((game) => game !== gameName);
-  //       setUserGame(likedGame);
-  //     }
-  //     await updateUserGame(user?.uid, likedGame);
-  //   } catch(error){
-  //     console.log("Error updating user clubs:", error);
-  //   }
-  // };
 
   const handleLike = async (gameName, isLiked) => {
     try {

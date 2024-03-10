@@ -47,7 +47,8 @@ export async function getUserInfo(uid) {
       const userDocSnapshot = await getDoc(userDocRef);
       
       if (userDocSnapshot.exists()) {
-        return userDocSnapshot.data();
+        const user = userSnapshot.data();
+        return user.favoritegame;
       } else {
         console.log("User document does not exist");
         return null;
