@@ -5,10 +5,13 @@ import { getClubs } from "../../controllers/clubs.js";
 import { useUser } from "../../context/user.js";
 import { getUserClubs } from "../../controllers/users.js";
 import { updateUserClubs } from "../../controllers/users.js";
+
+
 export default function MainPage() {
   const [clubs, setClubs] = useState([]);
   const user = useUser();
   const [userClubs, setUserClubs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchClubs() {
@@ -18,8 +21,11 @@ export default function MainPage() {
 
         const userClubsData = await getUserClubs(user?.uid);
         setUserClubs(userClubsData);
+        
       } catch (error) {
         console.log("Error fetching clubs:", error);
+      }finally {
+        setIsLoading(false);
       }
     }
     if (user) {
@@ -42,6 +48,11 @@ export default function MainPage() {
       console.log("Error updating user clubs:", error);
     }
   };
+  console.log(userClubs)
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.container}>

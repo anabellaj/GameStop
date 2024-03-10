@@ -55,6 +55,8 @@ export default function DetailsPage() {
   const clubGames = getClubGames();
 
 
+
+
   return <div>{currClub && 
         <div className='container-fluid'><h1>{currClub.nombre}</h1>
         <h4>{currClub.descripcion}</h4>
@@ -74,7 +76,7 @@ export default function DetailsPage() {
           ))}
 
         </div>
-        <Button display='Subscribirme'></Button>
+        {/* <Button display='Subscribirme'></Button> */}
 
 
         
