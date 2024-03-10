@@ -5,6 +5,7 @@ import { getClubs } from "../../controllers/clubs.js";
 import { useUser } from "../../context/user.js";
 import { getUserClubs } from "../../controllers/users.js";
 import { updateUserClubs } from "../../controllers/users.js";
+
 export default function MainPage() {
   const [clubs, setClubs] = useState([]);
   const user = useUser();
