@@ -6,8 +6,9 @@
     justify-content: center;
   }
   .label {
-    color: #fffded;
+    color: rgb(72, 86, 127);
     font-size: small;
+    
   }
   
   .input {

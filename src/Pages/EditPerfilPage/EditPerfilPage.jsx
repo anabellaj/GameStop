@@ -59,9 +59,10 @@ export default function EditPerfilPage() {
     <div>
       <div>
         <h1>Editar Perfil</h1>
-        <Input placeholder={data?.firstname} type="String" value={firstname} onChange={handleFirstname}></Input>
-        <Input placeholder={data?.lastname} type="String" value={lastname} onChange={handleLastname}></Input>
+        <Input placeholder={data?.firstname} type="String" value={firstname} onChange={handleFirstname} label='Nombre'></Input>
+        <Input placeholder={data?.lastname} type="String" value={lastname} onChange={handleLastname} label='Apellido'></Input>
         <InputReadonly
+          label='Videojuego Favorito'
           placeholder={data?.favoritegame}
           type="String"
         ></InputReadonly>

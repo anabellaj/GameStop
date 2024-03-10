@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+  }
+  
+  .button {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    padding: 0 44px;
+    border-radius: 30px;
+    border: 3px solid #48ddfe;
+    font-weight: 600;
+    color: #fffded;
+    background-color: #126b80;
+  }
+  
+  .button:hover {
+    transition: ease-in;
+    transition-duration: 0.3s;
+    background-color: transparent;
+    color: rgb(4, 53, 62);
+    border: 3px solid #48ddfe;
+  }

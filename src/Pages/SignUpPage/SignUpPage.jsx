@@ -113,21 +113,18 @@ export default function SignUpPage() {
     <div className={styles.formContent}>
       <div className={styles.formLeft}>
         <Input
-          label="Username"
           type="text"
           placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <Input
-          label="First Name"
           type="text"
           placeholder="Enter your First Name"
           value={firstname}
           onChange={(e) => setFirstname(e.target.value)}
         />
         <Input
-          label="Last Name"
           type="text"
           placeholder="Enter your Last Name"
           value={lastname}
@@ -136,21 +133,18 @@ export default function SignUpPage() {
       </div>
       <div className={styles.formRight}>
         <Input
-          label="E-Mail"
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
-          label="Contraseña"
           type="password"
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <Input
-          label="Confirmar Contraseña"
           type="password"
           placeholder="Confirm your password"
           value={confirmPassword}

@@ -48,13 +48,16 @@ export default function VerPerfilPage() {
         <h1>Mi Perfil</h1>
         <InputReadonly
           placeholder={data?.firstname}
+          label="Nombre"
           type="String"
         ></InputReadonly>
         <InputReadonly
+          label="Apellido"
           placeholder={data?.lastname}
           type="String"
         ></InputReadonly>
         <InputReadonly
+          label="Videojuego Favorito"
           placeholder={data?.favoritegame}
           type="String"
         ></InputReadonly>
