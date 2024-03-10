@@ -22,7 +22,7 @@ export default function Videogames(){
 
     return (
         <div className={styles.container}>
-            <div className={styles.header} style={{marginTop:'500px'}}>
+            <div className={styles.header} style={{marginTop:'100px'}}>
                 <h1 style={{marginRight:'30px'}}>Busca tus Videojuegos Favoritos</h1>
                 <Input placeholder='Busca aquí!' type='string'></Input>
             </div>

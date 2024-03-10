@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Club.module.css'
 
-export default function Club({name, description, state}){
+export default function Club({name, description, state, link}){
 
     const buttonText = state ? 'Retirarme' : 'Subscribirme';
 
@@ -12,7 +12,7 @@ export default function Club({name, description, state}){
             <div className={styles.more}>
             <button className='btn btn-outline-light'>{buttonText}</button>
            
-            <a className={styles.link} href=''>Más info</a>
+            <a className={styles.link} href={link}>Más info</a>
             </div>
         </div>
 

@@ -11,6 +11,8 @@
 }
 
 .container{
-
-    padding-top: 60px;
+    overflow-y: scroll;
+    overflow: auto;
+    height: 100vh;
+    padding-bottom: 30px;
 }
