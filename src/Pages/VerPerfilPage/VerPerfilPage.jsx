@@ -29,6 +29,8 @@ export default function VerPerfilPage() {
     getInfo();
   }, [user?.uid, navigate]);
 
+  
+
   return (
     <div>
       <div>

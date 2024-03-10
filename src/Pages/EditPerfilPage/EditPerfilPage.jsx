@@ -35,7 +35,7 @@ export default function EditPerfilPage() {
         <Input placeholder={data?.firstname} type="String"></Input>
         <Input placeholder={data?.lastname} type="String"></Input>
         <InputReadonly
-          placeholder={data?.favoritename}
+          placeholder={data?.favoritegame}
           type="String"
         ></InputReadonly>
         <ButtonInverse
