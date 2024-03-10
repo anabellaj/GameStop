@@ -32,6 +32,8 @@ export default function VerPerfilPage() {
 
   }, [location.pathname, user?.uid, navigate]);
 
+  
+
   return (
     <div>
       <div>
