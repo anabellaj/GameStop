@@ -15,6 +15,7 @@ import MainPage from "./Pages/MainPage/MainPage.jsx";
 import VerPerfilPage from './Pages/VerPerfilPage/VerPerfilPage.jsx'
 import EditPerfilPage from './Pages/EditPerfilPage/EditPerfilPage.jsx'
 import Videogames from './Pages/VideogamesPage/Videogames.jsx'
+import DetailsPage from './Pages/DetailsPage/DetailsPage.jsx'
 
 
 const MainRoutes = () => {
@@ -56,6 +57,7 @@ const MainRoutes = () => {
         <Route path="/profile" element={<VerPerfilPage />} />
         <Route path="/editprofile" element={<EditPerfilPage />} />
         <Route path="/videogames" element={<Videogames />} />
+        <Route path="/clubs/:ID" element={<DetailsPage />} />
         <Route path="*" element={<h1>Not found!</h1>} />
       </Routes>
       <Footer />

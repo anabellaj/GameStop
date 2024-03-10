@@ -29,6 +29,7 @@ export default function MainPage() {
             name={club.nombre}
             description={club.descripcion}
             state={true}
+            link={`/clubs/${club.ID}`}
           />
         ))}
       </div>
