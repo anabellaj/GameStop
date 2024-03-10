@@ -1,5 +1,5 @@
 import { db } from "../firebase/config";
-import { collection, addDoc, getDocs, deleteDoc, setDoc, doc, query, where} from "firebase/firestore";
+import { collection, addDoc, getDocs, getDoc, deleteDoc, setDoc, doc, query, where} from "firebase/firestore";
 
 export async function createClub({name, description, games}) {
     const gamesCollection = collection(db, "clubes");
@@ -23,7 +23,9 @@ export async function getClubs() {
 }
 
 export async function getClub(id) {
-    const club = doc(db, "clubes", id);
+    const clubRef = doc(db, "clubes", id);
+    const clubSnapshot = await getDoc(clubRef);
+    const club = clubSnapshot.data();
     return club;
 }
 
