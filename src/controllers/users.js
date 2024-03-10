@@ -1,5 +1,5 @@
 import { db } from "../firebase/config";
-import { collection, getDocs, getDoc, deleteDoc, setDoc, doc, query, where } from "firebase/firestore";
+import { collection, updateDoc, getDocs, getDoc, deleteDoc, setDoc, doc, query, where } from "firebase/firestore";
 
 // Función para crear un usuario
 export async function createUser({ uid, firstname, lastname, username, email, favoritegame, memberships }) {
@@ -47,8 +47,8 @@ export async function getUserInfo(uid) {
       const userDocSnapshot = await getDoc(userDocRef);
       
       if (userDocSnapshot.exists()) {
-        const user = userSnapshot.data();
-        return user.favoritegame;
+        const user = userDocSnapshot.data();
+        return user;
       } else {
         console.log("User document does not exist");
         return null;
@@ -115,4 +115,16 @@ export async function updateUserGame(uid, favoritegame) {
     const userRef = doc(usersCollection, uid);
     const data = { favoritegame };
     await setDoc(userRef, data, { merge: true });
+}
+
+export async function updateUserProfile(uid, firstname, lastname) {
+    const usersCollection = collection(db, "users");
+    const userRef = doc(usersCollection, uid);
+    
+    await updateDoc(userRef, 
+        {
+            firstname: firstname,
+            lastname: lastname
+        }
+        );
 }

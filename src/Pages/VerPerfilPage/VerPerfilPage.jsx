@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import Button from "../../Components/Buttons/Button";
 import { useUser } from "../../context/user.js";
 import { getUserInfo } from "../../controllers/users.js";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function VerPerfilPage() {
   const [data, setData] = useState(null);
+  const location = useLocation();
   const user = useUser();
   const navigate = useNavigate();
 
@@ -21,13 +22,15 @@ export default function VerPerfilPage() {
         const info = await getUserInfo(user?.uid);
 
         setData(info);
+        console.log(info);
       } catch (error) {
         console.log("Error retrieving user information:", error);
       }
     };
 
     getInfo();
-  }, [user?.uid, navigate]);
+
+  }, [location.pathname, user?.uid, navigate]);
 
   return (
     <div>
