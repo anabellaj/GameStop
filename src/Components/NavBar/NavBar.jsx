@@ -23,7 +23,7 @@ export default function NavBar (){
               
             </ul>
            
-                <img style={{width:'50px', height:'50px'}}  src='././GameStopLogo.png' alt='Logo'></img>
+                <img style={{width:'50px', height:'50px'}}  src='/GameStopLogo.png' alt='Logo'></img>
           
           </div>
         </div>
