@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function EditPerfilPage() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({});
   const user = useUser();
   const navigate = useNavigate();
 
