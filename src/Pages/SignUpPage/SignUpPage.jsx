@@ -107,9 +107,11 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.form}>
-        <h1>Sign Up</h1>
+    <div className={`${styles.container}`}>
+  <div className={styles.form}>
+    <h1 className="mt-5 pt-5" >Sign Up</h1>
+    <div className={styles.formContent}>
+      <div className={styles.formLeft}>
         <Input
           label="Username"
           type="text"
@@ -131,6 +133,8 @@ export default function SignUpPage() {
           value={lastname}
           onChange={(e) => setLastname(e.target.value)}
         />
+      </div>
+      <div className={styles.formRight}>
         <Input
           label="E-Mail"
           type="email"
@@ -152,14 +156,16 @@ export default function SignUpPage() {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <div className={styles.signup}>
-          <Button display="Sign Up" action={handleSignUpWithEmailAndPassword} />
-          <div onClick={handleSignUpWithGoogle} >
-            <img src="./GoogleLogo.png" alt="Google Logo" />
-          </div>
-        </div>
-        <a href="">¿Ya tienes una cuenta? ¡Ingresa aquí!</a>
       </div>
     </div>
+    <div className={styles.signup}>
+      <Button display="Sign Up" action={handleSignUpWithEmailAndPassword} />
+      <div onClick={handleSignUpWithGoogle}>
+        <img src="./GoogleLogo.png" alt="Google Logo" />
+      </div>
+    </div>
+    <a href="/login" className="pb-5 mb-2">¿Ya tienes una cuenta? ¡Ingresa aquí!</a>
+  </div>
+</div>
   );
 }

@@ -98,7 +98,7 @@ export default function LogInPage() {
             <img src="./GoogleLogo.png" alt="Google Logo" />
           </div>
         </div>
-        <a href="">¿Aún no tienes cuenta? ¡Regístrate!</a>
+        <a href="/signup">¿Aún no tienes cuenta? ¡Regístrate!</a>
       </div>
     </div>
   );

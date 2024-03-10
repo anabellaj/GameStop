@@ -18,7 +18,6 @@
 }
 
 .container{
-    /* margin-bottom: 100px; */
     overflow-y: scroll;
     overflow: auto;
     height: 100vh;
@@ -27,26 +26,3 @@
 
 
 
-/* @media (max-width: 1500px) {
-    .container {
-      margin-top: 800px;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .container {
-      margin-top: 3000px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .container {
-      margin-top: 6000px;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .container {
-      margin-top: 3000px;
-    }
-  } */
