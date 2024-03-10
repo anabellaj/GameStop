@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Input.module.css";
+import styles from "./InputReadonly.module.css";
 
-export default function Input({ type, placeholder, label, value, onChange }) {
+export default function InputReadonly({ type, placeholder, label }) {
   return (
     <div className={styles.container}>
       <label className={styles.label}>
@@ -11,8 +11,7 @@ export default function Input({ type, placeholder, label, value, onChange }) {
         className={styles.input}
         type={type}
         placeholder={placeholder}
-        value={value}
-        onChange={onChange}
+        readOnly
       ></input>
     </div>
   );

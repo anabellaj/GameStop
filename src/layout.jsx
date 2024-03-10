@@ -59,30 +59,14 @@ const MainRoutes = () => {
       <Footer />
     </div>
   );
-  // return (
-  //     <div>
-  //         {showNavBar && <NavBar />}
-  //         <Routes>
-  //             <Route path="/" element={<WelcomePage />} />
-  //             <Route path="/login" element={<LogInPage />} />
-  //             <Route path="/signup" element={<SignUpPage/>} />
-  //             <Route path="/home" element={<MainPage />} />
-  //             <Route path="/profile" element={<VerPerfilPage />} />
-  //             <Route path="/editprofile" element={<EditPerfilPage />} />
-  //             <Route path="/videogames" element={<VideogamesPage />} />
-  //             <Route path="*" element={<h1>Not found!</h1>} />
-  //         </Routes>
-  //         <Footer />
-  //     </div>
-  // );
 };
 
 const Layout = () => {
-    return (
-        <BrowserRouter>
-            <MainRoutes />
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <MainRoutes />
+    </BrowserRouter>
+  );
 };
 
 export default Layout;

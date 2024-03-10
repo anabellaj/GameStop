@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+ 
+}
+
+.container{
+    overflow-y: scroll;
+    overflow: auto;
+    height: 100vh;
+    padding-bottom: 30px;
+}
+
+
+

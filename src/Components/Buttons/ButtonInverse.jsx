@@ -1,9 +1,7 @@
 import React from "react";
-import styles from "./Button.module.css";
+import styles from "./ButtonInverse.module.css";
 
-export default function Button({ display, action }) {
-
-  
+export default function ButtonInverse({ display, action }) {
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={action}>
