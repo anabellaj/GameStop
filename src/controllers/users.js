@@ -58,3 +58,22 @@ export async function isNewUser(uid) {
         return true;
     }
 }
+
+export async function getUserClubs(uid) {
+    const userRef = doc(db, "users", uid);
+    const userSnapshot = await getDoc(userRef);
+    if (userSnapshot.exists()) {
+        const user = userSnapshot.data();
+        return user.memberships;
+    }else{
+        console.log("No se encontró ningún usuario con el UID proporcionado.");
+        return [];
+    }
+}
+
+export async function updateUserClubs(uid, memberships) {
+    const usersCollection = collection(db, "users");
+    const userRef = doc(usersCollection, uid);
+    const data = { memberships };
+    await setDoc(userRef, data, { merge: true });
+}

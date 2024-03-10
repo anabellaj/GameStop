@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import Input from '../../Components/Inputs/Input'
-import Game from '../../Components/Games/Game'
+import { useEffect, useState } from "react";
+import Input from "../../Components/Inputs/Input";
+import Game from "../../Components/Games/Game";
 
-import styles from './Videogames.module.css'
-import { getGames } from '../../controllers/games.js';
+import styles from "./Videogames.module.css";
+import { getGames } from "../../controllers/games.js";
 
-export default function Videogames(){
-    const [games, setGames] = useState([]);
+export default function Videogames() {
+  const [games, setGames] = useState([]);
 
   useEffect(() => {
     async function fetchGames() {
@@ -14,20 +14,20 @@ export default function Videogames(){
         const gamesData = await getGames();
         setGames(gamesData);
       } catch (error) {
-        console.log('Error fetching games:', error);
+        console.log("Error fetching games:", error);
       }
     }
     fetchGames();
   }, []);
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.header} style={{marginTop:'100px'}}>
-                <h1 style={{marginRight:'30px'}}>Busca tus Videojuegos Favoritos</h1>
-                <Input placeholder='Busca aquí!' type='string'></Input>
-            </div>
-            <div className={styles.games}>
-            {games.map((game) => (
+  return (
+    <div className={styles.container}>
+      <div className={styles.header} style={{ marginTop: "100px" }}>
+        <h1 style={{ marginRight: "30px" }}>Busca tus Videojuegos Favoritos</h1>
+        <Input placeholder="Busca aquí!" type="string"></Input>
+      </div>
+      <div className={styles.games}>
+        {games.map((game) => (
           <Game
             key={game.ID}
             nombre={game.titulo}
@@ -35,15 +35,8 @@ export default function Videogames(){
             genero={game.genero}
             fave={true}
           />
-        ))}                
-               
-
-                </div>
-        </div>
-
-
-
-    )
-
-
+        ))}
+      </div>
+    </div>
+  );
 }
