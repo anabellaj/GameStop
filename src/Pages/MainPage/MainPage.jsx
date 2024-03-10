@@ -66,7 +66,7 @@ export default function MainPage() {
           />
         ))}
       </div>
-      {error && <p>Error: {error}</p>} Stashed changes
+      {error && <p>Error: {error}</p>}
     </div>
   );
 }
