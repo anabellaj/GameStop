@@ -53,9 +53,15 @@ export default function Videogames(){
     }
   };
 
+  if (localStorage.getItem('1') === null){
+    return(
+      <button className='btn btn-secondary btn-lg' display='Probar'><a href='/' style={{color: 'white'}}>Por favor inicie sesión</a></button>
+    )
+}
   if (isLoading){
     return <div>Loading...</div>;
   }
+  
   
 
     return (

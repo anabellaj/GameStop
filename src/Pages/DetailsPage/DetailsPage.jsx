@@ -87,9 +87,16 @@ export default function DetailsPage() {
     }
   };
 
+  if (localStorage.getItem('1') === null){
+    return(
+      <button className='btn btn-secondary btn-lg' display='Probar'><a href='/' style={{color: 'white'}}>Por favor inicie sesión</a></button>
+    )
+}
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
+
 
   return <div>{currClub && 
         <div className='container-fluid'><h1>{currClub.nombre}</h1>

@@ -93,7 +93,8 @@ export default function SignUpPage() {
         };
 
         await createUser(data);
-        alert("Registro exitoso:", user.email);
+        //alert("Registro exitoso:", user.email);
+        localStorage.setItem('1','si')
 
       } else {
         alert("Ya estabas registrado");

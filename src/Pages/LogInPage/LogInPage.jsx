@@ -41,13 +41,16 @@ export default function LogInPage() {
     }
   };
 
+  
+
   const handleLogInWithGoogle = async () => {
     const user = await loginWithGoogle();
     if (user) {
       const isNew = await isNewUser(user.uid);
       if (!isNew) {
-        alert("Inicio de sesión exitoso:", user.email);
+        // alert("Inicio de sesión exitoso:", user.email);
         navigate("/home");
+        localStorage.setItem('1','si')
         return;
       }
       const data = {
@@ -75,6 +78,8 @@ export default function LogInPage() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
+  
 
   return (
     <div className={styles.container}>

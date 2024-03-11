@@ -20,6 +20,7 @@ export default function VerPerfilPage() {
 
   const cerrar =  async () => {
     await logout();
+    localStorage.removeItem('1');
     navigate ('/', {replace: true});
   }
 
@@ -40,7 +41,11 @@ export default function VerPerfilPage() {
 
   }, [location.pathname, user?.uid, navigate]);
 
-  
+  if (localStorage.getItem('1') === null){
+      return(
+        <button className='btn btn-secondary btn-lg' display='Probar'><a href='/' style={{color: 'white'}}>Por favor inicie sesión</a></button>
+      )
+  }
 
   return (
     <div>

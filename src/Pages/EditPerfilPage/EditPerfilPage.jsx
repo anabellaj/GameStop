@@ -19,6 +19,10 @@ export default function EditPerfilPage() {
 
 
   const saveInfo = () => {
+    if (!user || !firstname || !lastname){
+      alert('Por favor no deje casillas en blanco');
+      return 
+    }
     const update = async () => {
       try {
         await updateUserProfile(user?.uid, firstname, lastname, data?.favoritegame);
@@ -54,6 +58,12 @@ export default function EditPerfilPage() {
   const handleLastname = (e) => {
     setLastname(e.target.value);
   };
+
+  if (localStorage.getItem('1') === null){
+    return(
+      <button className='btn btn-secondary btn-lg' display='Probar'><a href='/' style={{color: 'white'}}>Por favor inicie sesión</a></button>
+    )
+}
 
   return (
     <div>
