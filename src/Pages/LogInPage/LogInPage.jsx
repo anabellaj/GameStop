@@ -34,7 +34,8 @@ export default function LogInPage() {
     }
     const user = await loginWithEmailAndPassword(email, password);
     if (user) {
-      alert("Inicio de sesión exitoso:", user.email);
+      //alert("Inicio de sesión exitoso:", user.email);
+      localStorage.setItem('1','si')
       navigate("/home");
     } else {
       alert("Error al iniciar sesión con Google");

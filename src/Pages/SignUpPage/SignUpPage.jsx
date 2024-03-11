@@ -65,7 +65,8 @@ export default function SignUpPage() {
       };
 
       await createUser(data);
-      alert("Registro exitoso:", user.email);
+      localStorage.setItem('1','si')
+      //alert("Registro exitoso:", user.email);
       navigate("/home");
     }else{
       alert("Error al iniciar sesión con Correo y Contraseña");
